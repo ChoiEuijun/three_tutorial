@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>threejs - basic</title>
+<!-- saved from url=(0020)https://threejs.org/ -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>3d practice example</title>
+		
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+		<link rel="shortcut icon" href="https://threejs.org/files/favicon.ico">
+		
+		<link rel="stylesheet" type="text/css" href="files/main.css">
+	</head>
 
-    <style>
-      body{
-        margin:0;
-        overflow:hidden;
-      }
-      canvas{
-        background:red;
-        
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="myCanvas"></canvas>
-    <script src="three.js">
 
-    </script>
-    <script>
-      var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
-      renderer.setClearColor(0x00ff00);
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      
-      var camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1,3000);
-   
-      var scene = new THREE.Scene();
+	<body class="home">
 
-      var light =new THREE.AmbientLight(0xffffff, 0.5);
-      scene.add(light);
+			<div id="panel">
 
-      var light1 =new THREE.PointLight(0xffffff, 0.5);
-      scene.add(light1);
+				<div id="header">
+					<h1><a href=""><div>3D practice example</div></a><a id="version" href="http://github.com/mrdoob/three.js/releases">v1.0</a></h1>
 
-      var geometry = new THREE.CubeGeometry(100,100,100);
-      var material = new THREE.MeshLambertMaterial({color: 0xf3ffe2});
-      var mesh = new THREE.Mesh(geometry,material);
-      mesh.position.set(0,0,-1000);
+					<div id="sections">
+						<a href="https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene">docs</a>
+						<a href="https://threejs.org/examples/#webgl_animation_cloth">examples</a>
+					</div>
 
-      scene.add(mesh);
+					<div id="expandButton"></div>
+				</div>
 
-      requestAnimationFrame(render);
+				<div id="panelScrim"></div>
 
-      function render() {
-        mesh.rotation.x += 0.01;
-        mesh.rotation.y += 0.01;
-        renderer.render(scene,camera);
-        requestAnimationFrame(render);
-      }
-    </script>
-  </body>
-</html>
+					<div id="contentWrapper">
+
+						<div id="content">
+
+							<h2>Geometry</h2>
+							<ul>
+								<li><a href="test.html" target="viewer">cube</a></li>
+								<li><a href="loader.html" target="viewer">loader</a></li>
+								<li><a href="https://threejs.org/editor/">editor</a></li>
+							</ul>
+
+							<h2>test</h2>
+							<ul>
+								<li><a href="https://stackoverflow.com/questions/tagged/three.js">questions</a></li>
+								<li><a href="https://discord.gg/HF4UdyF">discord</a></li>
+								<li><a href="https://discourse.threejs.org/">forum</a></li>
+								<li><a href="https://join.slack.com/t/threejs/shared_invite/enQtMzYxMzczODM2OTgxLTQ1YmY4YTQxOTFjNDAzYmQ4NjU2YzRhNzliY2RiNDEyYjU2MjhhODgyYWQ5Y2MyZTU3MWNkOGVmOGRhOTQzYTk">slack</a></li>
+								<li><a href="https://twitter.com/threejs_org">twitter</a></li>
+							</ul>
+
+							
+						</div>
+					</div>
+			</div>
+
+			<div>
+				<iframe id="viewer" name="viewer" src="3.html"  frameborder="" scrolling="no"></iframe>
+		
+			</div>
+		
+
+		
+
+</body></html>
