@@ -11,11 +11,16 @@
 		<link rel="shortcut icon" href="https://threejs.org/files/favicon.ico">
 
 		<link rel="stylesheet" type="text/css" href="files/main.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+		<script src="colors.js"></script>
+
 	</head>
 
 
 	<body class="home">
-
+		
 			<div id="panel">
 
 				<div id="header">
@@ -37,20 +42,10 @@
 
 							<h2>Geometry</h2>
 							<ul>
-								<li><a href="test.html" target="viewer">cube</a></li>
-								<li><a href="PLYLoader.html" target="viewer">PLYLoader</a></li>
+								<li><a href='cube.html' target="viewer">cube</a></li>
+								<li><a href="plyloader.html" target="viewer">PLYLoader</a></li>
 								<li><a href="https://threejs.org/editor/">editor</a></li>
 							</ul>
-
-							<h2>test</h2>
-							<ul>
-								<li><a href="https://stackoverflow.com/questions/tagged/three.js">questions</a></li>
-								<li><a href="https://discord.gg/HF4UdyF">discord</a></li>
-								<li><a href="https://discourse.threejs.org/">forum</a></li>
-								<li><a href="https://join.slack.com/t/threejs/shared_invite/enQtMzYxMzczODM2OTgxLTQ1YmY4YTQxOTFjNDAzYmQ4NjU2YzRhNzliY2RiNDEyYjU2MjhhODgyYWQ5Y2MyZTU3MWNkOGVmOGRhOTQzYTk">slack</a></li>
-								<li><a href="https://twitter.com/threejs_org">twitter</a></li>
-							</ul>
-
 
 						</div>
 					</div>
@@ -60,6 +55,22 @@
 				<iframe id="viewer" name="viewer" src="3.html"  frameborder="" scrolling="no"></iframe>
 
 			</div>
+
+			<!-- <article>
+
+			</article> -->
+			
+
+			
+			<script>
+			function fetchPage(name){
+				fetch(name).then(function(response){
+				  response.text().then(function(text){
+					document.querySelector('iframe').innerHTML = text;
+				  })
+				});
+			  }
+			</script>
 
 
 
