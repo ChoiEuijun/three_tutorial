@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <script src='js/three.js'></script>
+    
     <script type="module">
-        //import * as THREE from './js/three.js';
+
+        import * as THREE from './js/three.module.js';
+        import { OrbitControls } from './js/OrbitControls.js';
 
         var camera, scene, renderer;
         var geometry, material, mesh;
@@ -21,6 +23,7 @@
             camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
             camera.position.z = 1;
 
+        
             scene = new THREE.Scene();
             scene.background = new THREE.Color(0xffffff);
 
